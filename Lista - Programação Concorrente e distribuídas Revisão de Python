@@ -1,0 +1,31 @@
+import numpy as np
+
+# 1. Ordenar vetor
+def ordenar_vetor(vetor):
+    return np.sort(vetor)
+
+# 2. Fatorial recursivo
+def fatorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fatorial(n-1)
+
+# 3. Contagem de ocorrências de palavras
+def contar_ocorrencias(texto):
+    palavras = texto.lower().split()
+    contagem = {}
+    for palavra in palavras:
+        contagem[palavra] = contagem.get(palavra, 0) + 1
+    return contagem
+
+# 4. Transposta de matriz NumPy
+def transposta_matriz(matriz):
+    return matriz.T
+
+# 5. Contagem de números positivos, negativos e zeros em um vetor
+def contar_numeros(vetor):
+    positivos = sum(1 for num in vetor if num > 0)
+    negativos = sum(1 for num in vetor if num < 0)
+    zeros = sum(1 for num in vetor if num == 0)
+    return positivos, negativos, zeros
